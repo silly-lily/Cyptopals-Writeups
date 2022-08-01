@@ -1,2 +1,2 @@
 # cyptopals-writeup
-writeups of <a href="https://www.hackthebox.com/">The Cryptopals crypto challenges</a><br>
+writeups of <a href="https://cryptopals.com/">The Cryptopals</a> crypto challenges<br>
