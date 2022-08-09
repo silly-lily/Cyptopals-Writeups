@@ -5,6 +5,3 @@ b2 = codecs.decode(b16, 'hex')
 b64 = codecs.encode(b2, 'base64').decode()
 
 print(b64)
-
-
-

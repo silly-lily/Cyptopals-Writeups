@@ -1,7 +1,7 @@
 fp = open('set1/c4/data4.txt','r')
 lines = fp.readlines()
 
-pts_bytes = []
+pts = []
 num_letters = []
 
 for line in lines:
@@ -12,19 +12,19 @@ for line in lines:
 
         pt = ct^key
 
-        pt_hex = hex(pt)[2:]
-        pt_hex = (60-len(pt_hex))*'0'+pt_hex
+        pt = hex(pt)[2:]
+        pt = (60-len(pt))*'0'+pt
 
-        pt_bytes = bytes.fromhex(pt_hex)
-        pts_bytes.append((line,pt_bytes))
+        pt = bytes.fromhex(pt)
+        pts.append((line,pt))
 
         letters = 0
-        for pt_byte in pt_bytes:
-            if 0x41 <= pt_byte <= 0x5a or 0x61 <= pt_byte <= 0x7a or pt_byte == 32:
+        for b in pt:
+            if 0x41 <= b <= 0x5a or 0x61 <= b <= 0x7a or b == 0x20:
                 letters+=1
 
         num_letters.append(letters)
 
 index = num_letters.index(max(num_letters))
-print('ct:',pts_bytes[index][0])
-print('pt:',pts_bytes[index][1])
+print('ct:',pts[index][0])
+print('pt:',pts[index][1])
