@@ -1,2 +1,2 @@
-# cyptopals-writeup
-writeups of [The Cryptopals crypto challenges](https://cryptopals.com/)
+# Cyptopals-Writeups
+My writeups for [Cryptopals Challenges](https://cryptopals.com/)
